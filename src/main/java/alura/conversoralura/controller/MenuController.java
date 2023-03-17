@@ -4,8 +4,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import alura.conversoralura.model.Moneda;
+import alura.conversoralura.model.Temperatura;
 import alura.conversoralura.view.MenuView;
 import alura.conversoralura.view.MonedasView;
+import alura.conversoralura.view.TemperaturaView;
 
 public class MenuController implements ActionListener{
 	
@@ -32,7 +34,12 @@ public class MenuController implements ActionListener{
 			this.view.dispose();
 		}
 		if(e.getSource() == view.btnTemperaturas) {
-			//implementar
+			TemperaturaView tv = new TemperaturaView();
+			Temperatura temp = new Temperatura();
+			TemperaturaController tc = new TemperaturaController(temp,tv);
+			tv.setVisible(true);
+			tv.setLocationRelativeTo(null);
+			this.view.dispose();
 		}
 		if(e.getSource() == view.btnSalir) {
 			System.exit(0);

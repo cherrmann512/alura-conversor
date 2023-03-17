@@ -33,59 +33,58 @@ public class MonedaController implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource()== view.btnConvertir) {
-        	//implementar btnConvertir
         	try {
 	            double monto = (Double.parseDouble(view.txtMonto.getText()));
-	        	//System.out.println(monto);
+
 	        	switch(view.cmbConversiones.getSelectedIndex()) {
 		        	case 0:
 		        		System.out.println(view.cmbConversiones.getSelectedItem().toString());
 		        		moneda = new Moneda(monto);
-		        		conversion(monto,"Pesos Argentinos","Dolares",view.cmbConversiones.getSelectedItem().toString());
+		        		conversion(moneda,"Dolares",view.cmbConversiones.getSelectedItem().toString());
 		        		break;
 		        	case 1:
 		        		System.out.println(view.cmbConversiones.getSelectedItem().toString());
 		        		moneda = new Moneda(monto);
-		        		conversion(monto,"Pesos Argentinos","Euros",view.cmbConversiones.getSelectedItem().toString());
+		        		conversion(moneda,"Euros",view.cmbConversiones.getSelectedItem().toString());
 		        		break;
 		        	case 2:
 		        		System.out.println(view.cmbConversiones.getSelectedItem().toString());
 		        		moneda = new Moneda(monto);
-		        		conversion(monto,"Pesos Argentinos","Libras",view.cmbConversiones.getSelectedItem().toString());
+		        		conversion(moneda,"Libras",view.cmbConversiones.getSelectedItem().toString());
 		        		break;
 		        	case 3:
 		        		moneda = new Moneda(monto);
-		        		conversion(monto,"Pesos Argentinos","Won Surcoreanos",view.cmbConversiones.getSelectedItem().toString());
+		        		conversion(moneda,"Won Surcoreanos",view.cmbConversiones.getSelectedItem().toString());
 		        		break;
 		        	case 4:
 		        		System.out.println(view.cmbConversiones.getSelectedItem().toString());
 		        		moneda = new Moneda(monto);
-		        		conversion(monto,"Pesos Argentinos","Yenes",view.cmbConversiones.getSelectedItem().toString());
+		        		conversion(moneda,"Yenes",view.cmbConversiones.getSelectedItem().toString());
 		        		break;
 		        	case 5:
 		        		System.out.println(view.cmbConversiones.getSelectedItem().toString());
 		        		moneda = new Moneda(monto, "Dolares");
-		        		conversion(monto,"Dolares","Pesos Argentinos",view.cmbConversiones.getSelectedItem().toString());
+		        		conversion(moneda,"Pesos Argentinos",view.cmbConversiones.getSelectedItem().toString());
 		        		break;
 		        	case 6:
 		        		System.out.println(view.cmbConversiones.getSelectedItem().toString());
 		        		moneda = new Moneda(monto,"Euros");
-		        		conversion(monto,"Euros","Pesos Argentinos",view.cmbConversiones.getSelectedItem().toString());
+		        		conversion(moneda,"Pesos Argentinos",view.cmbConversiones.getSelectedItem().toString());
 		        		break;
 		        	case 7:
 		        		System.out.println(view.cmbConversiones.getSelectedItem().toString());
 		        		moneda = new Moneda(monto,"Libras");
-		        		conversion(monto,"Libras","Pesos Argentinos",view.cmbConversiones.getSelectedItem().toString());
+		        		conversion(moneda,"Pesos Argentinos",view.cmbConversiones.getSelectedItem().toString());
 		        		break;
 		        	case 8:
 		        		System.out.println(view.cmbConversiones.getSelectedItem().toString());
 		        		moneda = new Moneda(monto,"Won Surcoreanos");
-		        		conversion(monto,"Won Surcoreanos","Pesos Argentinos",view.cmbConversiones.getSelectedItem().toString());
+		        		conversion(moneda,"Pesos Argentinos",view.cmbConversiones.getSelectedItem().toString());
 		        		break;
 		        	case 9:
 		        		System.out.println(view.cmbConversiones.getSelectedItem().toString());
 		        		moneda = new Moneda(monto,"Yenes");
-		        		conversion(monto,"Yenes","Pesos Argentinos",view.cmbConversiones.getSelectedItem().toString());
+		        		conversion(moneda,"Pesos Argentinos",view.cmbConversiones.getSelectedItem().toString());
 		        		break;
 	        	}
         	
@@ -104,8 +103,7 @@ public class MonedaController implements ActionListener{
         	}
     }
     
-    public void conversion(double monto, String divisaOrigen, String divisaDestino, String conversion) {
-    	Moneda mon = new Moneda(monto,divisaOrigen);
+    public void conversion(Moneda mon, String divisaDestino, String conversion) {
     	double nuevoMonto = Math.round(moneda.convertir(conversion)*100.0)/100.0;
     	mon.setValor(nuevoMonto);
     	mon.setDivisa(divisaDestino);

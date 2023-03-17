@@ -37,11 +37,12 @@ public class TemperaturaView extends javax.swing.JFrame {
         btnAtras = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         lblBienvenido.setFont(new java.awt.Font("Segoe UI", 2, 24)); // NOI18N
         lblBienvenido.setText("Bienvenido al Conversor Alura");
 
-        lblGrados.setText("Ingrese los grados a convertir");
+        lblGrados.setText("Grados a convertir");
 
 //        txtGrados.addActionListener(new java.awt.event.ActionListener() {
 //            public void actionPerformed(java.awt.event.ActionEvent evt) {

@@ -17,6 +17,11 @@ public class Temperatura {
         this.grados = grados;
         this.escala = escala;
     }
+    
+    public Temperatura() {
+    	this.grados = 0;
+    	this.escala = Escala.CELSIUS;
+    }
 
     public void setEscala(Escala escala) {
         this.escala = escala;
@@ -62,7 +67,7 @@ public class Temperatura {
         }
     }
     
-        public double convertirAKelvin(){
+    public double convertirAKelvin(){
         switch (this.escala) {
             case KELVIN:
                 return this.grados;
@@ -75,11 +80,30 @@ public class Temperatura {
                 throw new AssertionError();
         }
     }
+    
+    public double conversion(String conversion) {
+    	switch (conversion) {
+		case "Celsius a Fahrenheit":
+			return this.convertirAFahrenheit();
+		case "Celsius a Kelvin":
+			return this.convertirAKelvin();
+		case "Fahrenheit a Celsius":
+			return this.convertirACelsius();
+		case "Fahrenheit a Kelvin":
+			return this.convertirAKelvin();
+		case "Kelvin a Celsius":
+			return this.convertirACelsius();
+		case "Kelvin a Fahrenheit":
+			return this.convertirAFahrenheit();
+		default:
+			throw new AssertionError();
+		}
+    }
 
     @Override
     public String toString() {
-        return "Temperatura: " + this.grados + " en Escala " + this.escala; // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
-    }
+        return "Temperatura: " + this.grados + "° en Escala " + this.escala; 
+        }
         
         
     
