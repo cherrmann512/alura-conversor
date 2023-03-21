@@ -52,7 +52,7 @@ public class TemperaturaView extends javax.swing.JFrame {
 
         lblConversion.setText("¿Entre que escalas realizará la conversión?");
 
-        cmbConversiones.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Celsius a Fahrenheit", "Celsius a Kelvin", "Fahrenheit a Celsius", "Fahrenheit a Kelvin", "Kelvin a Celsius", "Kelvin a Fahrenheit", " " }));
+        cmbConversiones.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Celsius a Fahrenheit", "Celsius a Kelvin", "Fahrenheit a Celsius", "Fahrenheit a Kelvin", "Kelvin a Celsius", "Kelvin a Fahrenheit"}));
 //        cmbConversiones.addActionListener(new java.awt.event.ActionListener() {
 //            public void actionPerformed(java.awt.event.ActionEvent evt) {
 //                cmbConversionesActionPerformed(evt);
