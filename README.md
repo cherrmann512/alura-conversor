@@ -34,7 +34,7 @@ Como desafío extra se añadió un convertidor de temperaturas.
               
 Si se ingresa valores invalidos (letras o cualquier simbolo) se le informa al usuario que debe ingresar sólo números.
 
-## 🔨interfaz
+## 🔨Interfaz y funcionamiento
 
 ![image](https://user-images.githubusercontent.com/38114128/226585919-6b8cb132-af2b-4259-a17c-0dae06031b11.png)
 ![image](https://user-images.githubusercontent.com/38114128/226586284-46d5510a-6f08-4cda-bb5f-af3e558776c0.png)
@@ -47,6 +47,8 @@ La interfaz para la sección de las temperaturas es practicamente la misma. Solo
 
 ## 🎆Como correr el proyecto
   1. Dentro de este repositorio se encuentra disponible el archivo .jar del proyecto, descarguelo y ejecutelo.
-  2. Clonar el repositorio en tu computadora, debe tener en cuenta que se utilizó Maven y Java 11 como tecnologías. 
-     Luego ejecute desde el IDE
+  2. Clonar el repositorio en tu computadora, debe tener en cuenta que se utilizó Maven y Java 11 como tecnologías. Luego ejecute desde el IDE
 
+## :confused: Dudas y consultas
+
+Pueden consultarme desde el discord de Alura
